@@ -1,4 +1,13 @@
-// import '../css/style.css';
-// import '../css/bootstrap.min.css';
-// import '../css/animate.css';
-console.log(123);
+import smoothScroll from './services/smoothScroll';
+import modals from './services/modal';
+import initSliders from './services/Slider';
+import { initCountdownTimer } from './services/Сountdown';
+import scaleImages from './services/scaleImages';
+
+document.addEventListener('DOMContentLoaded', () => {
+  smoothScroll();
+  modals();
+  initSliders();
+  initCountdownTimer();
+  scaleImages();
+});
