@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 body {
-  font-family: "NeoSansCyr-Regular", sans-serif;
+  font-family: 'NeoSansCyr-Regular', sans-serif;
   line-height: 150%;
   font-size: 16px;
   height: 100%;
@@ -10,13 +10,13 @@ body {
   color: #4f686e;
 }
 h2 span {
-  font-family: "NeoSansCyr-Medium", sans-serif;
+  font-family: 'NeoSansCyr-Medium', sans-serif;
 }
 h3 {
   text-transform: uppercase;
 }
 .text-normal {
-  font-family: "NeoSansCyr-Medium", sans-serif !important;
+  font-family: 'NeoSansCyr-Medium', sans-serif !important;
 }
 .text-warning {
   color: #ffb438;
@@ -40,7 +40,7 @@ h3 {
   display: inline-block;
 }
 .phone-icon {
-  background: url("../images/phone.png") no-repeat;
+  background: url('../images/phone.png') no-repeat;
   display: inline-block;
   width: 22px;
   height: 21px;
@@ -82,16 +82,16 @@ h3 {
 .form-control::-webkit-input-placeholder {
   color: #8e8e8e;
 }
-input[name="name"],
-input[name="phone"] {
-  background-image: url("../images/form-icons.png");
+input[name='name'],
+input[name='phone'] {
+  background-image: url('../images/form-icons.png');
   background-repeat: no-repeat;
   padding-left: 40px;
 }
-input[name="name"] {
+input[name='name'] {
   background-position: 0px 0px;
 }
-input[name="phone"] {
+input[name='phone'] {
   background-position: 0px -40px;
 }
 input.error {
@@ -102,7 +102,7 @@ input.error {
     0 0 8px rgba(220, 0, 0, 0.6);
 }
 .btn {
-  font-family: "NeoSansCyr-Medium", sans-serif;
+  font-family: 'NeoSansCyr-Medium', sans-serif;
   border-radius: 21px;
   font-size: 16px;
   font-weight: normal;
@@ -198,7 +198,7 @@ input.error {
 }
 .btn-sm,
 .btn-group-sm > .btn {
-  font-family: "NeoSansCyr-Regular", sans-serif;
+  font-family: 'NeoSansCyr-Regular', sans-serif;
   padding: 5px 25px;
   font-size: 16px;
   line-height: 1.5;
@@ -247,7 +247,7 @@ input.error {
   position: absolute;
   z-index: 1030;
   bottom: -1px;
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 1px;
@@ -302,7 +302,7 @@ input.error {
   -webkit-transition: background-color 0.1s linear, color 0.1s linear;
 }
 .menu-icons {
-  background-image: url("../images/menu-icons.png");
+  background-image: url('../images/menu-icons.png');
   background-repeat: no-repeat;
   height: 16px;
   display: inline-block;
@@ -358,7 +358,7 @@ input.error {
   background-position: -80px 0px;
 }
 #offer {
-  background: url("../images/offer2-bg.jpg") no-repeat 50% 50%;
+  background: url('../images/offer2-bg.jpg') no-repeat 50% 50%;
   position: relative;
   background-size: cover;
 }
@@ -366,7 +366,7 @@ input.error {
   position: absolute;
   z-index: 10;
   bottom: 0px;
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 1px;
@@ -385,7 +385,7 @@ input.error {
   text-align: right;
 }
 .offer-heading {
-  font-family: "NeoSansCyr-Medium", sans-serif;
+  font-family: 'NeoSansCyr-Medium', sans-serif;
   background-color: rgba(42, 52, 54, 0.8);
   padding: 20px;
   display: inline-block;
@@ -429,7 +429,7 @@ input.error {
   height: 41px;
 }
 .heading-image i {
-  background-image: url("../images/heading-icons.png");
+  background-image: url('../images/heading-icons.png');
   background-repeat: no-repeat;
   height: 41px;
   width: 41px;
@@ -438,7 +438,7 @@ input.error {
 }
 .heading-image i:after,
 .heading-image i:before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 73px;
@@ -565,7 +565,7 @@ input.error {
 }
 .service-text h3 {
   margin: 0px 0px 20px;
-  font-family: "NeoSansCyr-Medium", sans-serif;
+  font-family: 'NeoSansCyr-Medium', sans-serif;
 }
 .service-text p {
   font-size: 14px;
@@ -590,7 +590,7 @@ input.error {
   top: 43.64%;
   display: inline-block;
   padding: 2px 12px 2px 35px;
-  background: url("../images/preview.png") no-repeat 10px center #fff;
+  background: url('../images/preview.png') no-repeat 10px center #fff;
   font-size: 14px;
   border-radius: 14px;
 }
@@ -610,7 +610,7 @@ p.services-image_mobile {
   animation-name: rotateInUpLeft;
 }
 .order {
-  background: url("../images/order2-bg.jpg") no-repeat center;
+  background: url('../images/order2-bg.jpg') no-repeat center;
   padding: 80px 0px;
 }
 .order-inner {
@@ -624,14 +624,14 @@ p.services-image_mobile {
   margin: 0px 0px 10px 0px;
   line-height: 1.4;
   position: relative;
-  font-family: "NeoSansCyr-Medium", sans-serif;
+  font-family: 'NeoSansCyr-Medium', sans-serif;
 }
 .order-inner h2:before {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
+  content: '';
   width: 32px;
   height: 3px;
   border-radius: 2px;
@@ -672,7 +672,7 @@ p.services-image_mobile {
   margin-bottom: 0;
 }
 #reviews {
-  background: url("../images/review-bg.png");
+  background: url('../images/review-bg.png');
 }
 .review-inner {
   position: relative;
@@ -701,10 +701,10 @@ p.services-image_mobile {
   background-color: #ffb135;
 }
 .review-arrow:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 67px;
-  background-image: url("../images/review-arrows.png");
+  background-image: url('../images/review-arrows.png');
   background-repeat: no-repeat;
   width: 39px;
   height: 33px;
@@ -762,19 +762,19 @@ p.services-image_mobile {
 }
 .about-inner:after {
   position: absolute;
-  content: "";
+  content: '';
   width: 28px;
   height: 100px;
   top: 0px;
   right: -12px;
-  background-image: url("../images/about-arrow.png");
+  background-image: url('../images/about-arrow.png');
   background-repeat: no-repeat;
 }
 #about .col-lg-4:last-child .about-inner:last-child:after {
   display: none;
 }
 #documents {
-  background: url("../images/document-bg.jpg");
+  background: url('../images/document-bg.jpg');
 }
 .document-inner {
   display: inline-block;
@@ -782,7 +782,7 @@ p.services-image_mobile {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 .document-overlay {
-  background: url("../images/zoom.png") no-repeat center
+  background: url('../images/zoom.png') no-repeat center
     rgba(79, 104, 110, 0.42);
   position: absolute;
   width: 100%;
@@ -820,7 +820,7 @@ p.services-image_mobile {
   color: #4f686e;
 }
 .contact-icons {
-  background-image: url("../images/contact-icons.png");
+  background-image: url('../images/contact-icons.png');
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
@@ -960,7 +960,7 @@ p.services-image_mobile {
 }
 .countdown:after,
 .countdown:before {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -977,7 +977,7 @@ p.services-image_mobile {
   font-size: 42px;
   line-height: 74px;
   text-align: center;
-  font-family: "NeoSansCyr-Medium", sans-serif;
+  font-family: 'NeoSansCyr-Medium', sans-serif;
   border: 1px solid #9fabb1;
   background-color: #fff;
   border-radius: 4px;
@@ -1026,10 +1026,15 @@ p.services-image_mobile {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: #000 url("../images/loading.gif") no-repeat 50% 50%;
+  background: #000 url('../images/loading.gif') no-repeat 50% 50%;
 }
+
 .box-modal {
-  position: relative;
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 580px;
   padding: 0;
   background: #f4f6fa;
@@ -1047,7 +1052,7 @@ p.services-image_mobile {
   padding: 25px 25px;
   color: #808080;
   font-weight: 300;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .box-modal .box-modal_close:hover {
   color: #505050;
@@ -1093,6 +1098,19 @@ p.services-image_mobile {
 }
 .box-modal h4 {
   margin-top: 30px;
+}
+.modal__images {
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70dvw;
+  height: 90dvh;
+}
+.modal__images img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 @media (max-width: 1850px) {
   #offer .container {
@@ -1449,7 +1467,7 @@ input.error {
 
 @media only screen and (min-width: 992px) {
   ::-webkit-resizer {
-    background-image: url("");
+    background-image: url('');
     background-repeat: no-repeat;
     height: 1px;
     width: 8px;
@@ -1458,7 +1476,7 @@ input.error {
     width: 8px;
   }
   ::-webkit-scrollbar-button {
-    background-image: url("");
+    background-image: url('');
     background-repat: no-repeat;
     height: 0px;
     width: 8px;
@@ -1554,12 +1572,14 @@ input.error {
   z-index: 9999;
 }
 
-.header-modal__close {
+.header-modal__close,
+.modal__close {
   position: absolute;
   top: 5px;
   right: 5px;
   font-size: 36px;
   cursor: pointer;
+  z-index: 3;
 }
 
 .header-modal__close:hover {
