@@ -4,6 +4,7 @@ import modals from './services/modal';
 import initSliders from './services/Slider';
 import { initCountdownTimer } from './services/Сountdown';
 import scaleImages from './services/scaleImages';
+import calculator from './services/calculator';
 
 document.addEventListener('DOMContentLoaded', () => {
   smoothScroll();
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initSliders();
   initCountdownTimer();
   scaleImages();
+  calculator();
 });

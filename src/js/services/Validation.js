@@ -110,6 +110,9 @@ export default class Validation {
         input.value,
       ]),
     );
+    if (document.querySelector('#calc-total')?.value) {
+      formData['calc-total'] = document.querySelector('#calc-total')?.value;
+    }
 
     fetch('/send.php', {
       method: 'POST',
