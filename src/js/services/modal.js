@@ -1,3 +1,5 @@
+import Validation from './validation';
+
 const modals = () => {
   const modals = document.querySelectorAll('.fancyboxModal');
   const overlay = document.querySelector('.overlay');
@@ -16,8 +18,16 @@ const modals = () => {
         modalWindow.appendChild(close);
       }
 
+      if (target === '#application') {
+        modalWindow.querySelector('.box-modal_topic').textContent =
+          e.target.dataset.subject;
+      }
+
       modalWindow.style.display = 'block';
       overlay.style.display = 'block';
+
+      const validator = new Validation(modalWindow.querySelector('form'));
+      validator.init();
 
       document.body.addEventListener('click', (e) => {
         if (
