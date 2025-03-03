@@ -95,10 +95,8 @@ export class CountdownTimer {
  * Проверяет наличие элемента таймера на странице и, если он присутствует, создает экземпляр CountdownTimer.
  */
 export const initCountdownTimer = function () {
-  const section = document.querySelector('.countdown');
-  const targetDate = Date.now() + 1000 * 60 * 60 * 24 * 3;
-  if (section) {
-    // Передаем HTML-элемент в конструктор CountdownTimer
-    new CountdownTimer(section, targetDate);
-  }
+  document.querySelectorAll('.countdown')?.forEach((el) => {
+    const targetDate = Date.now() + 1000 * 60 * 60 * 24 * 3;
+    new CountdownTimer(el, targetDate);
+  });
 };
