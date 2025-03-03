@@ -144,6 +144,10 @@ export default class Validation {
     message.style.color = color;
     message.textContent = text;
     this.$form.append(message);
+
+    setTimeout(() => {
+      message.remove();
+    }, 2000);
   }
 }
 
