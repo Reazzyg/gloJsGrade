@@ -1,32 +1,17 @@
-/**
- * Класс для валидации и отправки формы.
- */
 export default class Validation {
-  /**
-   * @param {HTMLFormElement} form - Форма, к которой применяется валидация.
-   */
   constructor(form) {
     this.$form = form;
   }
 
-  /**
-   * Инициализация валидации: получение элементов формы и добавление слушателей событий.
-   */
   init() {
     this.getElements();
     this.addEventListeners();
   }
 
-  /**
-   * Получает все необходимые элементы формы.
-   */
   getElements() {
     this.$inputs = this.$form.querySelectorAll('input:not([type="hidden"])');
   }
 
-  /**
-   * Добавляет обработчики событий на отправку формы и ввод данных.
-   */
   addEventListeners() {
     this.$form?.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -57,10 +42,6 @@ export default class Validation {
     );
   }
 
-  /**
-   * Вызывает соответствующую валидацию для определенного типа поля.
-   * @param {Event} event - Событие ввода в поле формы.
-   */
   validateInputs(event) {
     let inputType = event.target.getAttribute('name');
     switch (inputType) {
@@ -73,36 +54,18 @@ export default class Validation {
     }
   }
 
-  /**
-   * Валидирует текстовые поля (ФИО).
-   * Разрешены только буквы, пробелы и дефис.
-   * @param {HTMLInputElement} input - Поле ввода.
-   */
   validateText(input) {
     input.value = input.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s-]/g, '');
   }
 
-  /**
-   * Валидирует телефонный номер.
-   * Разрешены только цифры, `+`, `()`, `-`, пробелы. Ограничение 16 символов.
-   * @param {HTMLInputElement} input - Поле ввода телефона.
-   */
   validatePhone(input) {
     input.value = input.value.replace(/[^+0-9()\-\s]/g, '').slice(0, 16);
   }
 
-  /**
-   * Проверяет, является ли поле пустым.
-   * @param {HTMLInputElement} input - Поле ввода.
-   * @returns {boolean} `true`, если поле пустое, иначе `false`.
-   */
   checkIfEmpty(input) {
     return input.value.trim() === '';
   }
 
-  /**
-   * Собирает данные формы и отправляет их на сервер.
-   */
   send() {
     const formData = Object.fromEntries(
       Array.from(this.$inputs).map((input) => [
@@ -135,11 +98,6 @@ export default class Validation {
       });
   }
 
-  /**
-   * Отображает сообщение об ошибке или успешной отправке.
-   * @param {string} text - Текст сообщения.
-   * @param {string} color - Цвет сообщения (например, 'red' или 'green').
-   */
   showMessage(text, color) {
     this.$form.querySelectorAll('.form-message')?.forEach((el) => el.remove());
     const message = document.createElement('span');
@@ -154,9 +112,6 @@ export default class Validation {
   }
 }
 
-/**
- * Инициализирует валидацию для всех форм на странице.
- */
 export function initValidation() {
   document.querySelectorAll('form')?.forEach(($form) => {
     if (!$form.closest('.box-modal')) {

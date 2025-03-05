@@ -1,19 +1,6 @@
-/**
- * Класс для создания слайдера с возможностью изменения количества активных слайдов при ресайзе.
- */
 import { Debouncer } from '../utils/Debouncer.js';
 
 class Slider {
-  /**
-   * @param {Object} classes - Классы для элементов слайдера.
-   * @param {string} classes.slider - Основной контейнер слайдера.
-   * @param {string} classes.sliderWrapper - Обертка для слайдов.
-   * @param {string} classes.sliderItems - Класс элементов-слайдов.
-   * @param {string} classes.arrowNext - Класс кнопки "вперед".
-   * @param {string} classes.arrowPrev - Класс кнопки "назад".
-   * @param {number} [activeSlides=3] - Количество активных слайдов по умолчанию.
-   * @param {number} [resizeSlides=1] - Количество активных слайдов при уменьшении экрана.
-   */
   constructor(classes, activeSlides = 3, resizeSlides = 1) {
     this.classes = classes;
     this.defaultActiveSlides = activeSlides;
@@ -22,9 +9,6 @@ class Slider {
     this.debouncer = new Debouncer();
   }
 
-  /**
-   * Получает и сохраняет DOM-элементы слайдера.
-   */
   getElements() {
     this.$slider = document.querySelector(this.classes.slider);
     this.$sliderWrapper = document.querySelector(this.classes.sliderWrapper);
@@ -37,18 +21,12 @@ class Slider {
     this.activeSlides = this.sliderItems.slice(0, this.activeSlidesAmmount);
   }
 
-  /**
-   * Инициализирует слайдер: получает элементы, добавляет обработчики событий и рендерит слайды.
-   */
   init() {
     this.getElements();
     this.addEventListeners();
     this.render();
   }
 
-  /**
-   * Добавляет обработчики событий для стрелок и ресайза окна.
-   */
   addEventListeners() {
     this.$arrowNext.addEventListener('click', () => this.next());
     this.$arrowPrev.addEventListener('click', () => this.prev());
@@ -59,9 +37,6 @@ class Slider {
     );
   }
 
-  /**
-   * Обрабатывает изменение размера экрана, изменяя количество активных слайдов.
-   */
   handleResize() {
     if (window.innerWidth < 576) {
       this.$sliderWrapper.style.justifyContent = 'center';
@@ -74,9 +49,6 @@ class Slider {
     this.render();
   }
 
-  /**
-   * Рендерит текущие активные слайды.
-   */
   render() {
     this.$sliderWrapper.innerHTML = '';
     this.activeSlides.forEach((slide) => {
@@ -84,9 +56,6 @@ class Slider {
     });
   }
 
-  /**
-   * Переключает слайдер вперед.
-   */
   next() {
     if (this.activeSlides.length < this.activeSlidesAmmount) return;
 
@@ -100,9 +69,6 @@ class Slider {
     this.render();
   }
 
-  /**
-   * Переключает слайдер назад.
-   */
   prev() {
     if (this.activeSlides.length < this.activeSlidesAmmount) return;
 
@@ -116,9 +82,6 @@ class Slider {
   }
 }
 
-/**
- * Инициализирует слайдеры на странице.
- */
 const initSliders = () => {
   const benefitsSlider = new Slider(
     {
