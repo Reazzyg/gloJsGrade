@@ -8,7 +8,7 @@ const calculator = () => {
     const materialValue = material.value !== '--' ? +material.value : 1;
     const squareValue = +square.value;
     if (typeValue && squareValue) {
-      res.value = typeValue * squareValue * materialValue;
+      res.value = Math.ceil(typeValue * squareValue * materialValue);
     }
   });
 };
